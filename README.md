@@ -30,12 +30,15 @@ java -Xmx1G -jar grouper.jar lng.txt
 
 ```
 java.lang.OutOfMemoryError: Java heap space
-Dumping heap to java_pid152340.hprof ...
-Heap dump file created [1765245287 bytes in 4,173 secs]
+Dumping heap to java_pid173757.hprof ...
+Heap dump file created [1765521821 bytes in 2,113 secs]
 Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
-        at java.base/java.lang.String.chars(String.java:4315)
-        at grouper.parser.Parser.isInvalidLine(Parser.java:34)
-        at grouper.parser.Parser.parseLineAndUpdateRowsAndColumnValueToRowIds(Parser.java:21)
+        at java.base/java.util.HashSet.<init>(HashSet.java:107)
+        at grouper.parser.Parser.lambda$parseLineAndUpdateColumnValueToRowIds$3(Parser.java:59)
+        at grouper.parser.Parser$$Lambda/0x000072b6880018c0.apply(Unknown Source)
+        at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1228)
+        at grouper.parser.Parser.parseLineAndUpdateColumnValueToRowIds(Parser.java:59)
+        at grouper.parser.Parser.parseLineAndUpdateRowsAndColumnValueToRowIds(Parser.java:25)
         at grouper.parser.ParserFromBufferedReader.parse(ParserFromBufferedReader.java:26)
         at grouper.Main.groupStrings(Main.java:41)
         at grouper.Main.main(Main.java:27)
