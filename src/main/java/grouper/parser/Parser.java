@@ -53,6 +53,7 @@ public abstract class Parser {
             if (value.isEmpty()) {
                 continue;
             }
+            value = value.intern();
             columnValueToRowIds
                 .computeIfAbsent(i, k -> new HashMap<>())
                 .computeIfAbsent(value, k -> new HashSet<>())
