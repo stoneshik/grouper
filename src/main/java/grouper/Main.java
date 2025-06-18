@@ -1,9 +1,7 @@
 package grouper;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -25,9 +23,6 @@ public class Main {
         if (args.length != 1) {
             System.err.println("Usage: java -jar string-grouper.jar <path-to-file>");
             return;
-        }
-        try (BufferedWriter writer = Files.newBufferedWriter(Paths.get("1111111.txt"))) {
-            writer.write("Количество групп с более чем одним элементом: ");
         }
         groupStrings(args);
         long elapsed = System.currentTimeMillis() - startTime;
