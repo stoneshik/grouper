@@ -21,7 +21,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         long startTime = System.currentTimeMillis();
         if (args.length != 1) {
-            System.err.println("Запуск командой: java -jar string-grouper.jar <path-to-file>");
+            System.err.println("Запуск командой: java -jar grouper.jar <path-to-file>");
             return;
         }
         groupStrings(args);
